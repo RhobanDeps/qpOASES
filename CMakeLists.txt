@@ -58,11 +58,12 @@ ENDIF( NOT CMAKE_BUILD_TYPE )
 option(QPOASES_BUILD_EXAMPLES "Build examples." ON)
 
 
-find_package(catkin)
+find_package(catkin REQUIRED COMPONENTS eigen)
 
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES qpOASES
+  CATKIN_DEPENDS eigen
 )
 
 ############################################################
@@ -106,6 +107,7 @@ endif("${isSystemDir}" STREQUAL "-1")
 #################### build and install #####################
 ############################################################
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
+INCLUDE_DIRECTORIES(${catkin_INCLUDE_DIRS})
 
 # compile qpOASES libraries
 FILE(GLOB SRC src/*.cpp)
