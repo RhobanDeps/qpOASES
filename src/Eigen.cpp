@@ -25,6 +25,7 @@ Eigen::VectorXd QPsolve(Eigen::MatrixXd H, Eigen::VectorXd g, Eigen::VectorXd* l
   }
 
   QProblem qp(g.size(), A == nullptr ? 0 : A->rows());
+  qp.setPrintLevel(qpOASES::PrintLevel::PL_LOW);
 
   qp.init(_H, _g, _A, _lb, _ub, _lbA, _ubA, _nWSR, cputime);
 
