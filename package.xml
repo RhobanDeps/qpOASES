@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>qpoases</name>
+  <version>0.0.0</version>
+  <description>A fixed version of qpoases with catkin capabilities</description>
+
+  <maintainer email="g.passault@gmail.com">Grégoire Passault</maintainer>
+  <author email="joachim.ferreau@ch.abb.com">Hans Joachim Ferreau</author>
+
+  <license>LGPL</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>

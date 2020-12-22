@@ -31,7 +31,7 @@
 
 cmake_minimum_required(VERSION 2.6)
 
-PROJECT(qpOASES CXX)
+PROJECT(qpoases CXX)
 SET(PACKAGE_NAME "qpOASES")
 SET(PACKAGE_VERSION "3.2.0")
 SET(PACKAGE_SO_VERSION "3.2")
@@ -57,6 +57,13 @@ ENDIF( NOT CMAKE_BUILD_TYPE )
 
 option(QPOASES_BUILD_EXAMPLES "Build examples." ON)
 
+
+find_package(catkin)
+
+catkin_package(
+  INCLUDE_DIRS include
+  LIBRARIES qpOASES
+)
 
 ############################################################
 #################### compiler flags ########################
